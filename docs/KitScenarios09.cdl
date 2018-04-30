@@ -1,0 +1,1777 @@
+//---------------------------------------------------------
+// CDL Generated based on pending OMG UML to CDL specification (0.3)
+// Source Model: Q:\BXS\EAI\Studio\Kit01\docs\KitScenarios09.mdl
+// Generated CDL specification: Q:\BXS\EAI\Studio\Kit01\docs\KitScenarios09.cdl
+// On 6/23/2000 
+//---------------------------------------------------------
+#include <BocaFramework.cdl>
+// Forward References
+// Logical View
+    module usecases {
+        module define {
+            type ChooseComponent;
+            type ChooseComponentInclude;
+            type ChooseOrCreateComponent;
+            type ChooseOrCreateComponentInclude;
+            type ChooseOrCreatePort;
+            type ChooseOrCreatePortInclude;
+            type ChoosePort;
+            type ChoosePortInclude;
+            type CreateComponent;
+            type CreateComponentInclude;
+            type DeletePort;
+            type EditPort;
+            type CreatePort;
+            type CreatePortInclude;
+            type DeleteComponent;
+            type EditComponent;
+            type EditPortInclude;
+            type EditComponentInclude;
+            type ChooseOrCreateAssemblyInclude;
+            type ChooseOrCreateAssembly;
+            type EditAssembly;
+            type DeleteAssembly;
+            type EditAssemblyInclude;
+            type CreateAssemblyInclude;
+            type ChooseAssemblyInclude;
+            type CreateAssembly;
+            type ChooseAssembly;
+            type EditLinkInclude;
+            type EditLink;
+            type DeleteLink;
+            type ChooseOrCreateLinkInclude;
+            type ChooseOrCreateLink;
+            type CreateLinkInclude;
+            type ChooseLinkInclude;
+            type CreateLink;
+            type ChooseLink;
+            type ComponentContentInclude;
+            type PortContentInclude;
+            type AssemblyContentInclude;
+        }; // End define
+        module behavior {
+            type AddReturn;
+            type AddStimuli;
+            type ChooseInteraction;
+            type ChooseInteractionInclude;
+            type ChooseOrCreateInteraction;
+            type ChooseOrCreateInteractionInclude;
+            type ChooseReturn;
+            type ChooseStimuli;
+            type CreateInteraction;
+            type CreateInteractionInclude;
+            type CreateListened;
+            type RemoveReturn;
+            type RemoveStimuli;
+            type EditInteraction;
+            type CreateRequested;
+            type CreateResponded;
+            type CreateSignaled;
+            type DeleteInteraction;
+            type EditInteractionInclude;
+            type RemoveStimuliInclude;
+            type AddStimuliInclude;
+            type AddReturnInclude;
+            type RemoveReturnInclude;
+            type InteractionContentInclude;
+        }; // End behavior
+        module organize {
+            type ChooseOrCreatePackage;
+            type ChooseOrCreatePackageInclude;
+            type ChoosePackage;
+            type ChoosePackageInclude;
+            type ModelingProject;
+            type CreatePackage;
+            type CreatePackageInclude;
+            type EditPackage;
+            type DeletePackage;
+            type EditPackageInclude;
+            type PackageContentsInclude;
+        }; // End organize
+        module structural {
+            type ChooseDocument;
+            type ChooseDocumentInclude;
+            type ChooseExposedStructuralFeature;
+            type ChooseOrCreateDocument;
+            type ChooseOrCreateDocumentInclude;
+            type ChooseOrCreateStructuralFeature;
+            type ChooseOrCreateStructuralFeatureInclude;
+            type ChooseStructuralFeature;
+            type ChooseStructuralFeatureInclude;
+            type ChooseStructuralFeatureType;
+            type CreateAttribute;
+            type CreateDocument;
+            type CreateDocumentInclude;
+            type CreateExposedStructuralFeature;
+            type CreateReference;
+            type DeleteStructuralFeature;
+            type EditStructuralFeature;
+            type SetMaxMultiplicity;
+            type SetMinMultiplicity;
+            type SetValueExpression;
+            type CreateStructuralFeature;
+            type EditStructuralFeatureInclude;
+            type CreateStructuralFeatureInclude;
+            type EditStructuralFeatureAttributesInclude;
+            type ChooseOrCreateEnumeratedType;
+            type ChooseOrCreateEnumeratedTypeInclude;
+            type ChooseOrCreateInfoTypeInclude;
+            type ChooseOrCreateInfoType;
+            type CreateInfoTypeInclude;
+            type ChooseInfoTypeInclude;
+            type CreateInfoType;
+            type ChooseInfoType;
+            type DeleteInfoType;
+            type EditInfoType;
+            type EditInfoTypeInclude;
+            type EditInfoTypeInternals;
+            type EditInfoTypeDocument;
+            type EditInfoTypeEnumeratedType;
+            type EditEnumeratedValueInclude;
+            type CreateEnumeratedType;
+            type ChooseEnumeratedType;
+            type ChooseEnumeratedTypeInclude;
+            type CreateEnumeratedTypeInclude;
+            type ChooseOrCreateEnumeratedValue;
+            type ChooseOrCreateEnumeratedValueInclude;
+            type CreateEnumeratedValue;
+            type CreateEnumeratedValueInclude;
+            type ChooseEnumeratedValueInclude;
+            type ChooseEnumeratedValue;
+            type EditEnumeratedValue;
+            type DeleteEnumeratedValue;
+            type ImportPrimitiveJavaClass;
+            type ImportStructuredJavaClass;
+            type CreateInfoTypeDocument;
+            type CreateInfoTypeEnumeratedType;
+            type EditInfoTypeStructuredJavaClass;
+            type EditInfoTypePrimitiveJavaClass;
+            type EditInfoTypeinternalsInclude;
+        }; // End structural
+        module session {
+            type ModelingSession;
+        }; // End session
+        module support {
+            type CreateAbstract;
+            type ChooseAbstract;
+            type QueryAbstract;
+            type QueryByFullyQualifiedName;
+            type RenameAbstract;
+        }; // End support
+        module definetrace {
+            type ChooseOrCreateTargetAssembly;
+            type ChooseOrCreateTargetAssemblyInclude;
+            type ChooseOrCreateTargetComponent;
+            type ChooseOrCreateTargetComponentInclude;
+            type ChooseOrCreateTargetPort;
+            type ChooseOrCreateTargetPortInclude;
+            type ChooseSynthesisSourceAssembly;
+            type ChooseSynthesisSourceAssemblyInclude;
+            type ChooseSynthesisSourceComponent;
+            type ChooseSynthesisSourceComponentInclude;
+            type ChooseSynthesisSourcePort;
+            type ChooseSynthesisSourcePortInclude;
+            type SynthetizeAssembly;
+            type SynthetizeAssemblyInclude;
+            type SynthetizeComponent;
+            type SynthetizeComponentInclude;
+            type SynthetizePort;
+            type SynthetizePortInclude;
+            type ExcludePort;
+            type ExcludePortInclude;
+            type ExcludeComponent;
+            type ExcludeComponentInclude;
+            type ExcludeAssembly;
+            type ExcludeAssemblyInclude;
+            type ComponentContentExcludeInclude;
+            type PortContentExcludeInclude;
+            type AssemblyContentExcludeInclude;
+            type OverrideComponent;
+            type OverrideComponentInclude;
+            type OverridePort;
+            type OverridePortInclude;
+            type ChooseOverrideSourcePort;
+            type ChooseOverrideSourcePortInclude;
+            type ChooseOverrideSourceComponentInclude;
+            type ChooseOverrideSourceComponent;
+            type ChooseOverrideTargetPortInclude;
+            type ChooseOverrideTargetPort;
+            type ExcludeLink;
+            type ExcludeLinkInclude;
+            type ChooseSourceExcludeComponentInclude;
+            type ChooseSourceExcludeComponent;
+            type ChooseSourceExcludeLink;
+            type ChooseSourceExcludeLinkInclude;
+            type ChooseSourceExcludeAssembly;
+            type ChooseSourceExcludeAssemblyInclude;
+            type OverrideAssemblyInclude;
+            type ComponentContentOverrideInclude;
+            type PortContentOverrideInclude;
+            type InteractionOverrideInclude;
+            type AssemblyContent;
+            type AssemblyContentOverrideInclude;
+            type OverrideAssembly;
+            type ChooseOverrideSourceAssembly;
+            type ChooseOverrideSourceAssemblyInclude;
+            type ChooseExcludeSourcePortInclude;
+            type ChooseExcludeSourcePort;
+        }; // End definetrace
+        module structuraltrace {
+            type ChooseOrCreateTargetDocument;
+            type ChooseOrCreateTargetDocumentInclude;
+            type ChooseOrCreateTargetStructuralFeature;
+            type ChooseOrCreateTargetStructuralFeatureInclude;
+            type ChooseSourceDocument;
+            type ChooseSourceDocumentInclude;
+            type ChooseSourceStructuralFeature;
+            type ChooseSourceStructuralFeatureInclude;
+            type SynthetizeDocument;
+            type SynthetizeDocumentInclude;
+            type SynthetizeStructuralFeature;
+            type SynthetizeStructuralFeatureInclude;
+            type SynthetizeInfoType;
+            type SynthetizeInfoTypeInclude;
+            type ChooseSourceInfoTypeInclude;
+            type ChooseSourceInfoType;
+            type ChooseOrCreateTargetInfoType;
+            type ChooseOrCreateTargetInfoTypeInclude;
+            type SynthetizeInfoTypeDocument;
+            type SynthetizeInfoTypeInternals;
+            type SynthetizeInfoTypeInternalsInclude;
+            type SynthetizeInfoTypeEnumeratedType;
+            type ExcludeInfoType;
+            type ExcludeInfoTypeInclude;
+            type ExcludeStructuralFeature;
+            type ExcludeStructuralFeatureInclude;
+            type OverrideInfoTypeInclude;
+            type OverrideInfoType;
+            type OverrideStructuralFeatureInclude;
+            type OverrideStructuralFeature;
+        }; // End structuraltrace
+        module behaviortrace {
+            type ChooseOrCreateTargetInteraction;
+            type ChooseOrCreateTargetInteractionInclude;
+            type ChooseSourceInteraction;
+            type ChooseSourceInteractionInclude;
+            type SynthetizeInteraction;
+            type SynthetizeInteractionInclude;
+            type ExcludeInteraction;
+            type ExcludeInteractionInclude;
+            type ExcludeStimuli;
+            type ExcludeReturn;
+            type ExcludeStimuliInclude;
+            type ExcludeReturnInclude;
+            type InteractionContentExcludeInclude;
+        }; // End behaviortrace
+        module organizetrace {
+            type SynthetizePackage;
+            type SynthetizePackageInclude;
+            type ChooseSourcePackage;
+            type ChooseSourcePackageInclude;
+            type ChooseOrCreateTargetPackage;
+            type ChooseOrCreateTargetPackageInclude;
+            type ExcludePackage;
+            type ExcludePackageInclude;
+            type PackageContentsExcludeInclude;
+        }; // End organizetrace
+    }; // End usecases
+    module core {
+        module projection {
+            module define {
+                type AliasProjection;
+                type AssemblyProjection;
+                type ComponentProjection;
+                type LinkProjection;
+                type PortProjection;
+                type RelayProjection;
+            }; // End define
+            module behavior {
+                type BehaviorInHandlerProjection;
+                type ListenedProjection;
+                type RequestedProjection;
+                type RespondedProjection;
+                type SignaledProjection;
+            }; // End behavior
+            module organize {
+                type ProjectProjection;
+                type PackageProjection;
+            }; // End organize
+            module structural {
+                type AttributeProjection;
+                type EnumeratedTypeProjection;
+                type PrimitiveJavaClassProjection;
+                type StructuredJavaClassProjection;
+                type ReferenceProjection;
+                type DocumentProjection;
+            }; // End structural
+            module edoc {
+            }; // End edoc
+            module projecting {
+                type Projectable;
+                type Projection;
+                type Projected;
+                type Hide;
+                type Fachade;
+            }; // End projecting
+        }; // End projection
+        module model {
+            module define {
+                type ComponentOwner;
+                type AbstractComponent;
+                type AssemblyOwner;
+                type AbstractAssembly;
+                type AbstractRelay;
+                type AbstractAlias;
+                type LinkOwner;
+                type PortOwner;
+                type AbstractPort;
+                type DelegationOwner;
+                type Delegator;
+                type Delegation;
+                type Delegate;
+                type AbstractLink;
+                type Component;
+                type Assembly;
+                type Link;
+                type Relay;
+                type Alias;
+                type Port;
+            }; // End define
+            module trace {
+                type Target;
+                type Transformation;
+                type Synthesis;
+                type Version;
+                type URL;
+                type Media;
+                type Comment;
+                type Attachment;
+                type Annotation;
+                type Source;
+                type Exclusion;
+            }; // End trace
+            module behavior {
+                type UnidirectionalInteraction;
+                type AbstractSignaled;
+                type AbstractListened;
+                type AbstractRequested;
+                type AbstractResponded;
+                type JavaClassHandler;
+                type JavaMethodDispatcher;
+                type Activation;
+                type BidirectionalInteraction;
+                type InteractionOwner;
+                type Interaction;
+                type HandlerOwner;
+                type Handler;
+                type AbstractBehaviorInHandler;
+                type DispatcherOwner;
+                type Dispatcher;
+                type BehaviorOwner;
+                type Behavior;
+                type Signaled;
+                type Listened;
+                type Requested;
+                type Responded;
+                type BehaviorInHandler;
+                type Stimuli;
+                type Return;
+            }; // End behavior
+            module support {
+//Error: Invalid stereotype: Enumeration
+                type DirectionKind;
+//Error: Invalid stereotype: Enumeration
+                type ScheduleKind;
+//Error: Invalid stereotype: Enumeration
+                type SynthesisMode;
+            }; // End support
+            module organize {
+                type AbstractOrganizational;
+                type AbstractProject;
+                type PackageOwner;
+                type AbstractPackage;
+                type Project;
+                type Package;
+            }; // End organize
+            module structural {
+                type PrimitiveType;
+                type AbstractAttribute;
+                type AbstractReference;
+                type AbstractEnumeratedType;
+                type EnumeratedValue;
+                type DefinedStructuralFeature;
+                type InfoTypeOwner;
+                type AbstractPrimitiveJavaClass;
+                type NativeResource;
+                type AbstractStructuredJavaClass;
+                type StructuralFeatureOwner;
+                type StructuralFeature;
+                type ExposedStructuralFeature;
+                type AbstractDocument;
+                type InfoType;
+                type EnumeratedType;
+                type PrimitiveJavaClass;
+                type StructuredJavaClass;
+                type Document;
+                type StructuralFeatureTyping;
+                type StructuredType;
+            }; // End structural
+            module observe {
+                type Activation;
+                type DependencyOwner;
+                type Dependency;
+            }; // End observe
+            module common {
+                type Common;
+            }; // End common
+            module edoc {
+                type ProcessType;
+                type BusinessSignal;
+                type Content;
+                type Community;
+                type InteractionPortal;
+                type InteractionInterface;
+                type CompositeProcess;
+                type BusinessProcess;
+                type PrimitiveProcess;
+                type Connection;
+                type InternalRole;
+                type ExternalRole;
+                type Resource;
+                type StructuralType;
+                type Reference;
+                type Attribute;
+            }; // End edoc
+        }; // End model
+    }; // End core
+    module TravelSample {
+        module 02_Flight {
+            module FlightStyleVariations {
+            }; // End FlightStyleVariations
+        }; // End 02_Flight
+        module 03_Hotel {
+            module HotelStyleVariations {
+            }; // End HotelStyleVariations
+        }; // End 03_Hotel
+        module 01_CustomerRepository {
+            module CustomerRepositoryStyleVariations {
+            }; // End CustomerRepositoryStyleVariations
+        }; // End 01_CustomerRepository
+        module 05_Travel {
+            module Arrangements {
+                module Travel_ArrangementsStyleVariations {
+                }; // End Travel_ArrangementsStyleVariations
+            }; // End Arrangements
+            module Reservations {
+            }; // End Reservations
+            module Purchase {
+            }; // End Purchase
+        }; // End 05_Travel
+        module 04_Client {
+            module ClientStyleVariations {
+            }; // End ClientStyleVariations
+        }; // End 04_Client
+        module 00_Library {
+        }; // End 00_Library
+    }; // End TravelSample
+//---------------------------------------------------------
+// Specification
+// Logical View
+    module usecases {
+        module define {
+            type ChooseComponent : support::ChooseAbstract {
+                relationship component References 1..1 core::model::define::AbstractComponent ; // Oneway relation
+            }; // End: ChooseComponent
+            [is_abstract]
+            type ChooseComponentInclude {
+                relationship componentChoice Aggregates 1..1 ChooseComponent ; // Oneway relation
+            }; // End: ChooseComponentInclude
+            type ChooseOrCreateComponent : CreateComponentInclude, ChooseComponentInclude {
+            }; // End: ChooseOrCreateComponent
+            [is_abstract]
+            type ChooseOrCreateComponentInclude {
+                relationship componentChoice Aggregates 1..1 ChooseOrCreateComponent ; // Oneway relation
+            }; // End: ChooseOrCreateComponentInclude
+            type ChooseOrCreatePort : CreatePortInclude, ChoosePortInclude {
+            }; // End: ChooseOrCreatePort
+            [is_abstract]
+            type ChooseOrCreatePortInclude {
+                relationship portChoice Aggregates 1..1 ChooseOrCreatePort ; // Oneway relation
+            }; // End: ChooseOrCreatePortInclude
+            type ChoosePort : support::ChooseAbstract {
+                relationship port References 1..1 core::model::define::AbstractPort ; // Oneway relation
+            }; // End: ChoosePort
+            [is_abstract]
+            type ChoosePortInclude {
+                relationship portChoice Aggregates 1..1 ChoosePort ; // Oneway relation
+            }; // End: ChoosePortInclude
+            type CreateComponent : support::CreateAbstract {
+                relationship component References 0..1 core::model::define::AbstractComponent ; // Oneway relation
+            }; // End: CreateComponent
+            [is_abstract]
+            type CreateComponentInclude {
+                relationship componentCreation Aggregates 0..1 CreateComponent ; // Oneway relation
+            }; // End: CreateComponentInclude
+            type DeletePort : ChoosePortInclude {
+            }; // End: DeletePort
+            type EditPort : ChooseOrCreatePortInclude, EditPortInclude, support::RenameAbstract, PortContentInclude, definetrace::SynthetizePortInclude {
+            }; // End: EditPort
+            type CreatePort : support::CreateAbstract {
+                relationship port References 0..1 core::model::define::AbstractPort ; // Oneway relation
+            }; // End: CreatePort
+            [is_abstract]
+            type CreatePortInclude {
+                relationship portCreation Aggregates 0..1 CreatePort ; // Oneway relation
+            }; // End: CreatePortInclude
+            type DeleteComponent : ChooseComponentInclude {
+            }; // End: DeleteComponent
+            type EditComponent : ChooseOrCreateComponentInclude, support::RenameAbstract, ComponentContentInclude, definetrace::SynthetizeComponentInclude {
+            }; // End: EditComponent
+            [is_abstract]
+            type EditPortInclude {
+                relationship portEditions Aggregates 0..* EditPort ; // Oneway relation
+                relationship portDeletions Aggregates 0..* DeletePort ; // Oneway relation
+            }; // End: EditPortInclude
+            [is_abstract]
+            type EditComponentInclude {
+                relationship componentDeletions Aggregates 0..* DeleteComponent ; // Oneway relation
+                relationship componentEditions Aggregates 0..* EditComponent ; // Oneway relation
+            }; // End: EditComponentInclude
+            [is_abstract]
+            type ChooseOrCreateAssemblyInclude {
+                relationship assemblyChoice Aggregates 1..1 ChooseOrCreateAssembly ; // Oneway relation
+            }; // End: ChooseOrCreateAssemblyInclude
+            type ChooseOrCreateAssembly : CreateAssemblyInclude, ChooseAssemblyInclude {
+            }; // End: ChooseOrCreateAssembly
+            type EditAssembly : ChooseOrCreateAssemblyInclude, support::RenameAbstract, AssemblyContentInclude, definetrace::SynthetizeAssemblyInclude {
+            }; // End: EditAssembly
+            type DeleteAssembly : ChooseAssemblyInclude {
+            }; // End: DeleteAssembly
+            [is_abstract]
+            type EditAssemblyInclude {
+                relationship assemblyEditions Aggregates 0..* EditAssembly ; // Oneway relation
+                relationship assemblyDeletions Aggregates 0..* DeleteAssembly ; // Oneway relation
+            }; // End: EditAssemblyInclude
+            [is_abstract]
+            type CreateAssemblyInclude {
+                relationship assemblyCreation Aggregates 0..1 CreateAssembly ; // Oneway relation
+            }; // End: CreateAssemblyInclude
+            [is_abstract]
+            type ChooseAssemblyInclude {
+                relationship assemblyChoice Aggregates 1..1 ChooseAssembly ; // Oneway relation
+            }; // End: ChooseAssemblyInclude
+            type CreateAssembly : support::CreateAbstract {
+                relationship assembly References 0..1 core::model::define::AbstractAssembly ; // Oneway relation
+            }; // End: CreateAssembly
+            type ChooseAssembly : support::ChooseAbstract {
+                relationship assembly References 1..1 core::model::define::AbstractAssembly ; // Oneway relation
+            }; // End: ChooseAssembly
+            [is_abstract]
+            type EditLinkInclude {
+                relationship linkEditions Aggregates 0..* EditLink ; // Oneway relation
+                relationship linkDeletions Aggregates 0..* DeleteLink ; // Oneway relation
+            }; // End: EditLinkInclude
+            type EditLink : ChooseOrCreateLinkInclude {
+            }; // End: EditLink
+            type DeleteLink : ChooseLinkInclude {
+            }; // End: DeleteLink
+            [is_abstract]
+            type ChooseOrCreateLinkInclude {
+                relationship linkChoice Aggregates 1..1 ChooseOrCreateLink ; // Oneway relation
+            }; // End: ChooseOrCreateLinkInclude
+            type ChooseOrCreateLink : CreateLinkInclude, ChooseLinkInclude {
+            }; // End: ChooseOrCreateLink
+            [is_abstract]
+            type CreateLinkInclude {
+                relationship linkCreation Aggregates 0..1 CreateLink ; // Oneway relation
+            }; // End: CreateLinkInclude
+            [is_abstract]
+            type ChooseLinkInclude {
+                relationship linkChoice Aggregates 1..1 ChooseLink ; // Oneway relation
+            }; // End: ChooseLinkInclude
+            type CreateLink : ChoosePortInclude {
+                relationship link References 0..1 core::model::define::AbstractLink ; // Oneway relation
+            }; // End: CreateLink
+            type ChooseLink {
+                relationship link References 1..1 core::model::define::AbstractLink ; // Oneway relation
+            }; // End: ChooseLink
+            [is_abstract]
+            type ComponentContentInclude : structural::EditStructuralFeatureInclude, structural::EditInfoTypeInclude, EditPortInclude, EditAssemblyInclude {
+            }; // End: ComponentContentInclude
+            [is_abstract]
+            type PortContentInclude : structural::EditInfoTypeInclude, behavior::EditInteractionInclude, structural::EditStructuralFeatureInclude {
+            }; // End: PortContentInclude
+            [is_abstract]
+            type AssemblyContentInclude : EditLinkInclude, EditComponentInclude {
+            }; // End: AssemblyContentInclude
+        }; // End define
+        module behavior {
+            type AddReturn : structural::ChooseOrCreateDocumentInclude {
+            }; // End: AddReturn
+            type AddStimuli : structural::ChooseOrCreateDocumentInclude {
+            }; // End: AddStimuli
+            type ChooseInteraction {
+                relationship interaction References 1..1 core::model::behavior::Interaction ; // Oneway relation
+            }; // End: ChooseInteraction
+            [is_abstract]
+            type ChooseInteractionInclude {
+                relationship interactionChoice Aggregates 1..1 ChooseInteraction ; // Oneway relation
+            }; // End: ChooseInteractionInclude
+            type ChooseOrCreateInteraction : CreateInteractionInclude, ChooseInteractionInclude {
+            }; // End: ChooseOrCreateInteraction
+            [is_abstract]
+            type ChooseOrCreateInteractionInclude {
+                relationship interactionChoice Aggregates 1..1 ChooseOrCreateInteraction ; // Oneway relation
+            }; // End: ChooseOrCreateInteractionInclude
+            type ChooseReturn {
+                relationship document References 1..1 core::model::structural::AbstractDocument ; // Oneway relation
+            }; // End: ChooseReturn
+            type ChooseStimuli {
+                relationship document References 1..1 core::model::structural::AbstractDocument ; // Oneway relation
+            }; // End: ChooseStimuli
+            [is_abstract]
+            type CreateInteraction {
+                relationship interaction References 0..1 core::model::behavior::Interaction ; // Oneway relation
+            }; // End: CreateInteraction
+            [is_abstract]
+            type CreateInteractionInclude {
+                relationship interactionCreation Aggregates 0..1 CreateInteraction ; // Oneway relation
+            }; // End: CreateInteractionInclude
+            type CreateListened : CreateInteraction {
+            }; // End: CreateListened
+            type RemoveReturn {
+                relationship returnChoice Aggregates 1..1 ChooseReturn ; // Oneway relation
+            }; // End: RemoveReturn
+            type RemoveStimuli {
+                relationship stimuliChoice Aggregates 1..1 ChooseStimuli ; // Oneway relation
+            }; // End: RemoveStimuli
+            type EditInteraction : ChooseOrCreateInteractionInclude, InteractionContentInclude {
+            }; // End: EditInteraction
+            type CreateRequested : CreateInteraction {
+            }; // End: CreateRequested
+            type CreateResponded : CreateInteraction {
+            }; // End: CreateResponded
+            type CreateSignaled : CreateInteraction {
+            }; // End: CreateSignaled
+            type DeleteInteraction : ChooseInteractionInclude {
+            }; // End: DeleteInteraction
+            [is_abstract]
+            type EditInteractionInclude {
+                relationship interactionDeletions Aggregates 0..* DeleteInteraction ; // Oneway relation
+                relationship interactionEditions Aggregates 0..* EditInteraction ; // Oneway relation
+            }; // End: EditInteractionInclude
+            [is_abstract]
+            type RemoveStimuliInclude {
+                relationship stimuliRemovals Aggregates 0..* RemoveStimuli ; // Oneway relation
+            }; // End: RemoveStimuliInclude
+            [is_abstract]
+            type AddStimuliInclude {
+                relationship stimuliAdditions Aggregates 0..* AddStimuli ; // Oneway relation
+            }; // End: AddStimuliInclude
+            [is_abstract]
+            type AddReturnInclude {
+                relationship returnAdditions Aggregates 0..* AddReturn ; // Oneway relation
+            }; // End: AddReturnInclude
+            [is_abstract]
+            type RemoveReturnInclude {
+                relationship returnRemovals Aggregates 0..* RemoveReturn ; // Oneway relation
+            }; // End: RemoveReturnInclude
+            [is_abstract]
+            type InteractionContentInclude : RemoveStimuliInclude, AddStimuliInclude, AddReturnInclude, RemoveReturnInclude {
+            }; // End: InteractionContentInclude
+        }; // End behavior
+        module organize {
+            type ChooseOrCreatePackage : CreatePackageInclude, ChoosePackageInclude {
+            }; // End: ChooseOrCreatePackage
+            [is_abstract]
+            type ChooseOrCreatePackageInclude {
+                relationship packageChoice Aggregates 1..1 ChooseOrCreatePackage ; // Oneway relation
+            }; // End: ChooseOrCreatePackageInclude
+            type ChoosePackage : support::ChooseAbstract {
+                relationship package References 1..1 core::model::organize::AbstractPackage ; // Oneway relation
+            }; // End: ChoosePackage
+            [is_abstract]
+            type ChoosePackageInclude {
+                relationship packageChoice Aggregates 1..1 ChoosePackage ; // Oneway relation
+            }; // End: ChoosePackageInclude
+            type ModelingProject {
+                relationship modelingSessions Aggregates 0..* session::ModelingSession ; // Oneway relation
+            }; // End: ModelingProject
+            type CreatePackage : support::CreateAbstract {
+                relationship package References 0..1 core::model::organize::AbstractPackage ; // Oneway relation
+            }; // End: CreatePackage
+            [is_abstract]
+            type CreatePackageInclude {
+                relationship packageCreation Aggregates 0..1 CreatePackage ; // Oneway relation
+            }; // End: CreatePackageInclude
+            type EditPackage : ChooseOrCreatePackageInclude, support::RenameAbstract, PackageContentsInclude {
+            }; // End: EditPackage
+            type DeletePackage : ChoosePackageInclude {
+            }; // End: DeletePackage
+            [is_abstract]
+            type EditPackageInclude {
+                relationship packageDeletions Aggregates 0..* DeletePackage ; // Oneway relation
+                relationship packageEditions Aggregates 0..* EditPackage ; // Oneway relation
+            }; // End: EditPackageInclude
+            [is_abstract]
+            type PackageContentsInclude : define::EditAssemblyInclude, define::EditComponentInclude, structural::EditInfoTypeInclude, define::EditPortInclude, definetrace::SynthetizePortInclude, structuraltrace::SynthetizeInfoTypeInclude, definetrace::SynthetizeComponentInclude, definetrace::SynthetizeAssemblyInclude, organizetrace::SynthetizePackageInclude, EditPackageInclude {
+            }; // End: PackageContentsInclude
+        }; // End organize
+        module structural {
+            type ChooseDocument : support::ChooseAbstract {
+                relationship document References 1..1 core::model::structural::AbstractDocument ; // Oneway relation
+            }; // End: ChooseDocument
+            [is_abstract]
+            type ChooseDocumentInclude {
+                relationship documentChoice Aggregates 1..1 ChooseDocument ; // Oneway relation
+            }; // End: ChooseDocumentInclude
+            type ChooseExposedStructuralFeature : support::ChooseAbstract {
+                relationship exposedStructuralFeature References 0..1 core::model::structural::ExposedStructuralFeature ; // Oneway relation
+            }; // End: ChooseExposedStructuralFeature
+            type ChooseOrCreateDocument : ChooseDocumentInclude, CreateDocumentInclude {
+            }; // End: ChooseOrCreateDocument
+            [is_abstract]
+            type ChooseOrCreateDocumentInclude {
+                relationship documentChoice Aggregates 1..1 ChooseOrCreateDocument ; // Oneway relation
+            }; // End: ChooseOrCreateDocumentInclude
+            type ChooseOrCreateStructuralFeature : ChooseStructuralFeatureInclude, CreateStructuralFeatureInclude {
+            }; // End: ChooseOrCreateStructuralFeature
+            [is_abstract]
+            type ChooseOrCreateStructuralFeatureInclude {
+                relationship structuralFeatureChoice Aggregates 1..1 ChooseOrCreateStructuralFeature ; // Oneway relation
+            }; // End: ChooseOrCreateStructuralFeatureInclude
+            type ChooseStructuralFeature : support::ChooseAbstract {
+                relationship structuralFeature References 1..1 core::model::structural::StructuralFeature ; // Oneway relation
+            }; // End: ChooseStructuralFeature
+            [is_abstract]
+            type ChooseStructuralFeatureInclude {
+                relationship structuralFeatureChoice Aggregates 1..1 ChooseStructuralFeature ; // Oneway relation
+            }; // End: ChooseStructuralFeatureInclude
+            type ChooseStructuralFeatureType : support::ChooseAbstract {
+            }; // End: ChooseStructuralFeatureType
+            type CreateAttribute : CreateStructuralFeature {
+                relationship attribute References 0..1 core::model::structural::AbstractAttribute ; // Oneway relation
+            }; // End: CreateAttribute
+            type CreateDocument : support::CreateAbstract {
+                relationship document References 0..1 core::model::structural::AbstractDocument ; // Oneway relation
+            }; // End: CreateDocument
+            [is_abstract]
+            type CreateDocumentInclude {
+                relationship documentCreation Aggregates 0..1 CreateDocument ; // Oneway relation
+            }; // End: CreateDocumentInclude
+            type CreateExposedStructuralFeature : CreateStructuralFeature {
+                relationship exposedStructuralFeature References 0..1 core::model::structural::ExposedStructuralFeature ; // Oneway relation
+            }; // End: CreateExposedStructuralFeature
+            type CreateReference : CreateStructuralFeature {
+                relationship reference References 0..1 core::model::structural::AbstractReference ; // Oneway relation
+            }; // End: CreateReference
+            type DeleteStructuralFeature : ChooseStructuralFeatureInclude {
+            }; // End: DeleteStructuralFeature
+            type EditStructuralFeature : ChooseOrCreateStructuralFeatureInclude, EditStructuralFeatureAttributesInclude, support::RenameAbstract {
+                relationship exposedStructuralFeatureChoices Aggregates 0..* ChooseExposedStructuralFeature ; // Oneway relation
+            }; // End: EditStructuralFeature
+            type SetMaxMultiplicity {
+                attribute int newMaxMultiplicity;
+            }; // End: SetMaxMultiplicity
+            type SetMinMultiplicity {
+                attribute int newMinMultiplicity;
+            }; // End: SetMinMultiplicity
+            type SetValueExpression {
+                attribute String newValueExpression;
+            }; // End: SetValueExpression
+            [is_abstract]
+            type CreateStructuralFeature : support::CreateAbstract {
+            }; // End: CreateStructuralFeature
+            [is_abstract]
+            type EditStructuralFeatureInclude {
+                relationship structuralFeatureDeletions Aggregates 0..* DeleteStructuralFeature ; // Oneway relation
+                relationship structuralFeatureEditions Aggregates 0..* EditStructuralFeature ; // Oneway relation
+            }; // End: EditStructuralFeatureInclude
+            [is_abstract]
+            type CreateStructuralFeatureInclude {
+                relationship structuralFeatureCreation Aggregates 0..1 CreateStructuralFeature ; // Oneway relation
+            }; // End: CreateStructuralFeatureInclude
+            [is_abstract]
+            type EditStructuralFeatureAttributesInclude {
+                relationship structuralFeatureTypeChoices Aggregates 0..* ChooseStructuralFeatureType ; // Oneway relation
+                relationship valueExpressionSettings Aggregates 0..* SetValueExpression ; // Oneway relation
+                relationship minMultiplicitySettings Aggregates 0..* SetMinMultiplicity ; // Oneway relation
+                relationship maxMultiplicitySettings Aggregates 0..* SetMaxMultiplicity ; // Oneway relation
+            }; // End: EditStructuralFeatureAttributesInclude
+            type ChooseOrCreateEnumeratedType : CreateEnumeratedTypeInclude, ChooseEnumeratedTypeInclude {
+            }; // End: ChooseOrCreateEnumeratedType
+            [is_abstract]
+            type ChooseOrCreateEnumeratedTypeInclude {
+                relationship enumeratedTypeChoice Aggregates 1..1 ChooseOrCreateEnumeratedType ; // Oneway relation
+            }; // End: ChooseOrCreateEnumeratedTypeInclude
+            [is_abstract]
+            type ChooseOrCreateInfoTypeInclude {
+                relationship infoTypeChoice Aggregates 1..1 ChooseOrCreateInfoType ; // Oneway relation
+            }; // End: ChooseOrCreateInfoTypeInclude
+            type ChooseOrCreateInfoType : CreateInfoTypeInclude, ChooseInfoTypeInclude {
+            }; // End: ChooseOrCreateInfoType
+            [is_abstract]
+            type CreateInfoTypeInclude {
+                relationship infoTypeCreation Aggregates 0..1 CreateInfoType ; // Oneway relation
+            }; // End: CreateInfoTypeInclude
+            [is_abstract]
+            type ChooseInfoTypeInclude {
+                relationship infoTypeChoice Aggregates 1..1 ChooseInfoType ; // Oneway relation
+            }; // End: ChooseInfoTypeInclude
+            [is_abstract]
+            type CreateInfoType : support::CreateAbstract {
+                relationship infoType References 0..1 core::model::structural::InfoType ; // Oneway relation
+            }; // End: CreateInfoType
+            type ChooseInfoType : support::ChooseAbstract {
+                relationship infoType References 1..1 core::model::structural::InfoType ; // Oneway relation
+            }; // End: ChooseInfoType
+            type DeleteInfoType : ChooseInfoTypeInclude {
+            }; // End: DeleteInfoType
+            type EditInfoType : ChooseOrCreateInfoTypeInclude, EditInfoTypeinternalsInclude, support::RenameAbstract {
+            }; // End: EditInfoType
+            [is_abstract]
+            type EditInfoTypeInclude {
+                relationship infoTypeDeletions Aggregates 0..* DeleteInfoType ; // Oneway relation
+                relationship infoTypeEditions Aggregates 0..* EditInfoType ; // Oneway relation
+            }; // End: EditInfoTypeInclude
+            [is_abstract]
+            type EditInfoTypeInternals {
+            }; // End: EditInfoTypeInternals
+            type EditInfoTypeDocument : EditInfoTypeInternals, EditStructuralFeatureInclude, EditInfoTypeInclude {
+            }; // End: EditInfoTypeDocument
+            type EditInfoTypeEnumeratedType : EditInfoTypeInternals, EditEnumeratedValueInclude {
+            }; // End: EditInfoTypeEnumeratedType
+            [is_abstract]
+            type EditEnumeratedValueInclude {
+                relationship enumeratedValueEditions Aggregates 0..* EditEnumeratedValue ; // Oneway relation
+                relationship enumeratedValueDeletions Aggregates 0..* DeleteEnumeratedValue ; // Oneway relation
+            }; // End: EditEnumeratedValueInclude
+            type CreateEnumeratedType : support::CreateAbstract {
+                relationship enumeratedType References 0..1 core::model::structural::AbstractEnumeratedType ; // Oneway relation
+            }; // End: CreateEnumeratedType
+            type ChooseEnumeratedType : support::ChooseAbstract {
+                relationship enumeratedType References 1..1 core::model::structural::AbstractEnumeratedType ; // Oneway relation
+            }; // End: ChooseEnumeratedType
+            [is_abstract]
+            type ChooseEnumeratedTypeInclude {
+                relationship enumeratedTypeChoice Aggregates 1..1 ChooseEnumeratedType ; // Oneway relation
+            }; // End: ChooseEnumeratedTypeInclude
+            [is_abstract]
+            type CreateEnumeratedTypeInclude {
+                relationship enumeratedTypeCreation Aggregates 0..1 CreateEnumeratedType ; // Oneway relation
+            }; // End: CreateEnumeratedTypeInclude
+            type ChooseOrCreateEnumeratedValue : CreateEnumeratedValueInclude, ChooseEnumeratedValueInclude {
+            }; // End: ChooseOrCreateEnumeratedValue
+            [is_abstract]
+            type ChooseOrCreateEnumeratedValueInclude {
+                relationship enumeratedValueChoice Aggregates 1..1 ChooseOrCreateEnumeratedValue ; // Oneway relation
+            }; // End: ChooseOrCreateEnumeratedValueInclude
+            type CreateEnumeratedValue : support::CreateAbstract {
+                relationship enumeratedValue References 0..1 core::model::structural::EnumeratedValue ; // Oneway relation
+            }; // End: CreateEnumeratedValue
+            [is_abstract]
+            type CreateEnumeratedValueInclude {
+                relationship enumeratedValueCreation Aggregates 0..1 CreateEnumeratedValue ; // Oneway relation
+            }; // End: CreateEnumeratedValueInclude
+            [is_abstract]
+            type ChooseEnumeratedValueInclude {
+                relationship enumeratedValueChoice Aggregates 1..1 ChooseEnumeratedValue ; // Oneway relation
+            }; // End: ChooseEnumeratedValueInclude
+            type ChooseEnumeratedValue : support::ChooseAbstract {
+                relationship enumeratedValue References 1..1 core::model::structural::EnumeratedValue ; // Oneway relation
+            }; // End: ChooseEnumeratedValue
+            type EditEnumeratedValue : ChooseOrCreateEnumeratedValueInclude, support::RenameAbstract {
+            }; // End: EditEnumeratedValue
+            type DeleteEnumeratedValue : ChooseEnumeratedValueInclude {
+            }; // End: DeleteEnumeratedValue
+            type ImportPrimitiveJavaClass : CreateInfoType {
+            }; // End: ImportPrimitiveJavaClass
+            type ImportStructuredJavaClass : CreateInfoType {
+            }; // End: ImportStructuredJavaClass
+            type CreateInfoTypeDocument : CreateInfoType {
+            }; // End: CreateInfoTypeDocument
+            type CreateInfoTypeEnumeratedType : CreateInfoType {
+            }; // End: CreateInfoTypeEnumeratedType
+            type EditInfoTypeStructuredJavaClass : EditInfoTypeInternals, EditInfoTypeInclude {
+            }; // End: EditInfoTypeStructuredJavaClass
+            type EditInfoTypePrimitiveJavaClass : EditInfoTypeInternals {
+            }; // End: EditInfoTypePrimitiveJavaClass
+            [is_abstract]
+            type EditInfoTypeinternalsInclude {
+                relationship internalsEdition Aggregates 0..1 EditInfoTypeInternals ; // Oneway relation
+            }; // End: EditInfoTypeinternalsInclude
+        }; // End structural
+        module session {
+            type ModelingSession : organize::EditPackageInclude, organizetrace::SynthetizePackageInclude {
+            }; // End: ModelingSession
+        }; // End session
+        module support {
+            [is_abstract]
+            type CreateAbstract {
+                attribute String newName;
+            }; // End: CreateAbstract
+            [is_abstract]
+            type ChooseAbstract {
+                relationship query Aggregates 1..1 QueryAbstract ; // Oneway relation
+            }; // End: ChooseAbstract
+            [is_abstract]
+            type QueryAbstract {
+            }; // End: QueryAbstract
+            type QueryByFullyQualifiedName : QueryAbstract {
+                attribute String fullyQualifiedName;
+            }; // End: QueryByFullyQualifiedName
+            [is_abstract]
+            type RenameAbstract {
+                attribute String newName;
+            }; // End: RenameAbstract
+        }; // End support
+        module definetrace {
+            type ChooseOrCreateTargetAssembly : define::ChooseOrCreateAssembly {
+            }; // End: ChooseOrCreateTargetAssembly
+            [is_abstract]
+            type ChooseOrCreateTargetAssemblyInclude {
+                relationship targetAssemblyChoice Aggregates 1..1 ChooseOrCreateTargetAssembly ; // Oneway relation
+            }; // End: ChooseOrCreateTargetAssemblyInclude
+            type ChooseOrCreateTargetComponent : define::ChooseOrCreateComponent {
+            }; // End: ChooseOrCreateTargetComponent
+            [is_abstract]
+            type ChooseOrCreateTargetComponentInclude {
+                relationship targetComponentChoice Aggregates 1..1 ChooseOrCreateTargetComponent ; // Oneway relation
+            }; // End: ChooseOrCreateTargetComponentInclude
+            type ChooseOrCreateTargetPort : define::ChooseOrCreatePort {
+            }; // End: ChooseOrCreateTargetPort
+            [is_abstract]
+            type ChooseOrCreateTargetPortInclude {
+                relationship targetPortChoice Aggregates 1..1 ChooseOrCreateTargetPort ; // Oneway relation
+            }; // End: ChooseOrCreateTargetPortInclude
+            type ChooseSynthesisSourceAssembly {
+            }; // End: ChooseSynthesisSourceAssembly
+            [is_abstract]
+            type ChooseSynthesisSourceAssemblyInclude {
+                relationship synthesisSourceAssemblyChoice Aggregates 1..1 ChooseSynthesisSourceAssembly ; // Oneway relation
+            }; // End: ChooseSynthesisSourceAssemblyInclude
+            type ChooseSynthesisSourceComponent {
+            }; // End: ChooseSynthesisSourceComponent
+            [is_abstract]
+            type ChooseSynthesisSourceComponentInclude {
+                relationship synthesisSourceComponentChoice Aggregates 1..1 ChooseSynthesisSourceComponent ; // Oneway relation
+            }; // End: ChooseSynthesisSourceComponentInclude
+            type ChooseSynthesisSourcePort {
+            }; // End: ChooseSynthesisSourcePort
+            [is_abstract]
+            type ChooseSynthesisSourcePortInclude {
+                relationship sourcePortChoice Aggregates 1..1 ChooseSynthesisSourcePort ; // Oneway relation
+            }; // End: ChooseSynthesisSourcePortInclude
+            type SynthetizeAssembly : ChooseSynthesisSourceAssemblyInclude, support::RenameAbstract, AssemblyContentExcludeInclude, AssemblyContentOverrideInclude {
+            }; // End: SynthetizeAssembly
+            [is_abstract]
+            type SynthetizeAssemblyInclude {
+                relationship assemblySynthesis Aggregates 0..* SynthetizeAssembly ; // Oneway relation
+            }; // End: SynthetizeAssemblyInclude
+            type SynthetizeComponent : ChooseSynthesisSourceComponentInclude, support::RenameAbstract, ComponentContentExcludeInclude, ComponentContentOverrideInclude {
+            }; // End: SynthetizeComponent
+            [is_abstract]
+            type SynthetizeComponentInclude {
+                relationship componentSynthesis Aggregates 0..* SynthetizeComponent ; // Oneway relation
+            }; // End: SynthetizeComponentInclude
+            type SynthetizePort : support::RenameAbstract, ExcludePortInclude, PortContentExcludeInclude {
+            }; // End: SynthetizePort
+            [is_abstract]
+            type SynthetizePortInclude {
+                relationship portSynthesis Aggregates 0..* SynthetizePort ; // Oneway relation
+            }; // End: SynthetizePortInclude
+            type ExcludePort : ChooseExcludeSourcePortInclude {
+            }; // End: ExcludePort
+            [is_abstract]
+            type ExcludePortInclude {
+                relationship portExclusions Aggregates 0..* ExcludePort ; // Oneway relation
+            }; // End: ExcludePortInclude
+            type ExcludeComponent : ChooseSourceExcludeComponentInclude {
+            }; // End: ExcludeComponent
+            [is_abstract]
+            type ExcludeComponentInclude {
+                relationship componentExclusions Aggregates 0..* ExcludeComponent ; // Oneway relation
+            }; // End: ExcludeComponentInclude
+            type ExcludeAssembly : ChooseSourceExcludeAssemblyInclude {
+            }; // End: ExcludeAssembly
+            [is_abstract]
+            type ExcludeAssemblyInclude {
+                relationship assemblyExclusions Aggregates 0..* ExcludeAssembly ; // Oneway relation
+            }; // End: ExcludeAssemblyInclude
+            [is_abstract]
+            type ComponentContentExcludeInclude : structuraltrace::ExcludeStructuralFeatureInclude, ExcludeAssemblyInclude, structuraltrace::ExcludeInfoTypeInclude, ExcludePortInclude {
+            }; // End: ComponentContentExcludeInclude
+            [is_abstract]
+            type PortContentExcludeInclude : structuraltrace::ExcludeStructuralFeatureInclude, structuraltrace::ExcludeInfoTypeInclude, behaviortrace::ExcludeInteractionInclude {
+            }; // End: PortContentExcludeInclude
+            [is_abstract]
+            type AssemblyContentExcludeInclude : ExcludeComponentInclude, ExcludeLinkInclude {
+            }; // End: AssemblyContentExcludeInclude
+            type OverrideComponent : ChooseOverrideSourceComponentInclude, support::RenameAbstract, ComponentContentExcludeInclude, define::ComponentContentInclude, ComponentContentOverrideInclude {
+            }; // End: OverrideComponent
+            [is_abstract]
+            type OverrideComponentInclude {
+                relationship componentOverrides Aggregates 0..* OverrideComponent ; // Oneway relation
+            }; // End: OverrideComponentInclude
+            type OverridePort : support::RenameAbstract, ChooseOverrideSourcePortInclude, ChooseOverrideTargetPortInclude, PortContentExcludeInclude, ExcludePortInclude, PortContentOverrideInclude, define::PortContentInclude {
+            }; // End: OverridePort
+            [is_abstract]
+            type OverridePortInclude {
+                relationship portOverrides Aggregates 0..* OverridePort ; // Oneway relation
+            }; // End: OverridePortInclude
+            type ChooseOverrideSourcePort : define::ChoosePort {
+            }; // End: ChooseOverrideSourcePort
+            [is_abstract]
+            type ChooseOverrideSourcePortInclude {
+                relationship overrideSourcePortChoice Aggregates 1..1 ChooseOverrideSourcePort ; // Oneway relation
+            }; // End: ChooseOverrideSourcePortInclude
+            [is_abstract]
+            type ChooseOverrideSourceComponentInclude {
+                relationship overrideSourceComponentChoice Aggregates 1..1 ChooseOverrideSourceComponent ; // Oneway relation
+            }; // End: ChooseOverrideSourceComponentInclude
+            type ChooseOverrideSourceComponent {
+            }; // End: ChooseOverrideSourceComponent
+            [is_abstract]
+            type ChooseOverrideTargetPortInclude {
+                relationship overrideTargetPortChoice Aggregates 1..1 ChooseOverrideTargetPort ; // Oneway relation
+            }; // End: ChooseOverrideTargetPortInclude
+            type ChooseOverrideTargetPort : define::ChoosePort {
+            }; // End: ChooseOverrideTargetPort
+            type ExcludeLink : ChooseSourceExcludeLinkInclude {
+            }; // End: ExcludeLink
+            [is_abstract]
+            type ExcludeLinkInclude {
+                relationship linkExclusions Aggregates 0..* ExcludeLink ; // Oneway relation
+            }; // End: ExcludeLinkInclude
+            [is_abstract]
+            type ChooseSourceExcludeComponentInclude {
+                relationship exclusionSourceComponentChoice Aggregates 1..1 ChooseSourceExcludeComponent ; // Oneway relation
+            }; // End: ChooseSourceExcludeComponentInclude
+            type ChooseSourceExcludeComponent {
+            }; // End: ChooseSourceExcludeComponent
+            type ChooseSourceExcludeLink {
+            }; // End: ChooseSourceExcludeLink
+            type ChooseSourceExcludeLinkInclude {
+                relationship exclusionSourceLinkChoice Aggregates 1..1 ChooseSourceExcludeLink ; // Oneway relation
+            }; // End: ChooseSourceExcludeLinkInclude
+            type ChooseSourceExcludeAssembly {
+            }; // End: ChooseSourceExcludeAssembly
+            [is_abstract]
+            type ChooseSourceExcludeAssemblyInclude {
+                relationship exclusionSourceAssemblyChoice Aggregates 1..1 ChooseSourceExcludeAssembly ; // Oneway relation
+            }; // End: ChooseSourceExcludeAssemblyInclude
+            [is_abstract]
+            type OverrideAssemblyInclude {
+                relationship assemblyOverrides Aggregates 0..* OverrideAssembly ; // Oneway relation
+            }; // End: OverrideAssemblyInclude
+            [is_abstract]
+            type ComponentContentOverrideInclude : structuraltrace::OverrideStructuralFeatureInclude, structuraltrace::OverrideInfoTypeInclude, OverrideAssemblyInclude, OverridePortInclude {
+            }; // End: ComponentContentOverrideInclude
+            [is_abstract]
+            type PortContentOverrideInclude : InteractionOverrideInclude {
+            }; // End: PortContentOverrideInclude
+            [is_abstract]
+            type InteractionOverrideInclude {
+            }; // End: InteractionOverrideInclude
+            type AssemblyContent {
+            }; // End: AssemblyContent
+            [is_abstract]
+            type AssemblyContentOverrideInclude : OverrideComponentInclude {
+            }; // End: AssemblyContentOverrideInclude
+            type OverrideAssembly : support::RenameAbstract, ChooseOverrideSourceAssemblyInclude, define::AssemblyContentInclude, AssemblyContentExcludeInclude, AssemblyContentOverrideInclude {
+            }; // End: OverrideAssembly
+            type ChooseOverrideSourceAssembly {
+            }; // End: ChooseOverrideSourceAssembly
+            [is_abstract]
+            type ChooseOverrideSourceAssemblyInclude {
+                relationship overrideSourceAssemblyChoice Aggregates 1..1 ChooseOverrideSourceAssembly ; // Oneway relation
+            }; // End: ChooseOverrideSourceAssemblyInclude
+            [is_abstract]
+            type ChooseExcludeSourcePortInclude {
+                relationship exclusionSourcePortChoice Aggregates 1..1 ChooseExcludeSourcePort ; // Oneway relation
+            }; // End: ChooseExcludeSourcePortInclude
+            type ChooseExcludeSourcePort {
+            }; // End: ChooseExcludeSourcePort
+        }; // End definetrace
+        module structuraltrace {
+            type ChooseOrCreateTargetDocument : structural::ChooseOrCreateDocument {
+            }; // End: ChooseOrCreateTargetDocument
+            [is_abstract]
+            type ChooseOrCreateTargetDocumentInclude {
+                relationship targetDocumentChoice Aggregates 1..1 ChooseOrCreateTargetDocument ; // Oneway relation
+            }; // End: ChooseOrCreateTargetDocumentInclude
+            type ChooseOrCreateTargetStructuralFeature : structural::ChooseOrCreateStructuralFeature {
+            }; // End: ChooseOrCreateTargetStructuralFeature
+            [is_abstract]
+            type ChooseOrCreateTargetStructuralFeatureInclude {
+                relationship targetStructuralFeatureChoice Aggregates 1..1 ChooseOrCreateTargetStructuralFeature ; // Oneway relation
+            }; // End: ChooseOrCreateTargetStructuralFeatureInclude
+            type ChooseSourceDocument : structural::ChooseDocument {
+            }; // End: ChooseSourceDocument
+            [is_abstract]
+            type ChooseSourceDocumentInclude {
+                relationship sourceDocumentChoice Aggregates 1..1 ChooseSourceDocument ; // Oneway relation
+            }; // End: ChooseSourceDocumentInclude
+            type ChooseSourceStructuralFeature : structural::ChooseStructuralFeature {
+            }; // End: ChooseSourceStructuralFeature
+            [is_abstract]
+            type ChooseSourceStructuralFeatureInclude {
+                relationship structuralFeatureChoice Aggregates 1..1 ChooseSourceStructuralFeature ; // Oneway relation
+            }; // End: ChooseSourceStructuralFeatureInclude
+            type SynthetizeDocument : SynthetizeStructuralFeatureInclude, structural::EditStructuralFeatureInclude, ChooseSourceDocumentInclude, ChooseOrCreateTargetDocumentInclude, SynthetizeInfoTypeInclude, structural::EditInfoTypeInclude, support::RenameAbstract {
+            }; // End: SynthetizeDocument
+            [is_abstract]
+            type SynthetizeDocumentInclude {
+                relationship documentSynthesis Aggregates 0..* SynthetizeDocument ; // Oneway relation
+            }; // End: SynthetizeDocumentInclude
+            type SynthetizeStructuralFeature : ChooseSourceStructuralFeatureInclude, ChooseOrCreateTargetStructuralFeatureInclude, structural::EditStructuralFeatureAttributesInclude, support::RenameAbstract {
+            }; // End: SynthetizeStructuralFeature
+            [is_abstract]
+            type SynthetizeStructuralFeatureInclude {
+                relationship structuralFeatureSynthesis Aggregates 0..* SynthetizeStructuralFeature ; // Oneway relation
+            }; // End: SynthetizeStructuralFeatureInclude
+            type SynthetizeInfoType : ChooseSourceInfoTypeInclude, ChooseOrCreateTargetInfoTypeInclude, structural::EditInfoTypeinternalsInclude, SynthetizeInfoTypeInternalsInclude, support::RenameAbstract {
+            }; // End: SynthetizeInfoType
+            [is_abstract]
+            type SynthetizeInfoTypeInclude {
+                relationship infoTypeSynthesis Aggregates 0..* SynthetizeInfoType ; // Oneway relation
+            }; // End: SynthetizeInfoTypeInclude
+            [is_abstract]
+            type ChooseSourceInfoTypeInclude {
+                relationship choiceSourceInfoType Aggregates 1..1 ChooseSourceInfoType ; // Oneway relation
+            }; // End: ChooseSourceInfoTypeInclude
+            type ChooseSourceInfoType : structural::ChooseInfoType {
+            }; // End: ChooseSourceInfoType
+            type ChooseOrCreateTargetInfoType : structural::ChooseOrCreateInfoType {
+            }; // End: ChooseOrCreateTargetInfoType
+            [is_abstract]
+            type ChooseOrCreateTargetInfoTypeInclude {
+                relationship choiceTargetInfoType Aggregates 1..1 ChooseOrCreateTargetInfoType ; // Oneway relation
+            }; // End: ChooseOrCreateTargetInfoTypeInclude
+            type SynthetizeInfoTypeDocument : structural::EditStructuralFeatureInclude, SynthetizeInfoTypeInclude, SynthetizeStructuralFeatureInclude, structural::EditInfoTypeInclude, SynthetizeInfoTypeInternals, ExcludeStructuralFeatureInclude, ExcludeInfoTypeInclude {
+            }; // End: SynthetizeInfoTypeDocument
+            [is_abstract]
+            type SynthetizeInfoTypeInternals {
+            }; // End: SynthetizeInfoTypeInternals
+            [is_abstract]
+            type SynthetizeInfoTypeInternalsInclude {
+                relationship internalsSynthesis Aggregates 0..1 SynthetizeInfoTypeInternals ; // Oneway relation
+            }; // End: SynthetizeInfoTypeInternalsInclude
+            type SynthetizeInfoTypeEnumeratedType : SynthetizeInfoTypeInternals, structural::EditEnumeratedValueInclude {
+            }; // End: SynthetizeInfoTypeEnumeratedType
+            type ExcludeInfoType : ChooseSourceInfoTypeInclude {
+            }; // End: ExcludeInfoType
+            [is_abstract]
+            type ExcludeInfoTypeInclude {
+                relationship infoTypeExclusions Aggregates 0..* ExcludeInfoType ; // Oneway relation
+            }; // End: ExcludeInfoTypeInclude
+            type ExcludeStructuralFeature : ChooseSourceStructuralFeatureInclude {
+            }; // End: ExcludeStructuralFeature
+            [is_abstract]
+            type ExcludeStructuralFeatureInclude {
+                relationship structuralFeatureExclusions Aggregates 0..* ExcludeStructuralFeature ; // Oneway relation
+            }; // End: ExcludeStructuralFeatureInclude
+            [is_abstract]
+            type OverrideInfoTypeInclude {
+                relationship infoTypeOverrides Aggregates 0..* OverrideInfoType ; // Oneway relation
+            }; // End: OverrideInfoTypeInclude
+            type OverrideInfoType {
+            }; // End: OverrideInfoType
+            [is_abstract]
+            type OverrideStructuralFeatureInclude {
+                relationship structuralFeatureOverrides Aggregates 0..* OverrideStructuralFeature ; // Oneway relation
+            }; // End: OverrideStructuralFeatureInclude
+            type OverrideStructuralFeature {
+            }; // End: OverrideStructuralFeature
+        }; // End structuraltrace
+        module behaviortrace {
+            type ChooseOrCreateTargetInteraction : behavior::ChooseOrCreateInteraction {
+            }; // End: ChooseOrCreateTargetInteraction
+            [is_abstract]
+            type ChooseOrCreateTargetInteractionInclude {
+                relationship targetInteractionChoice Aggregates 1..1 ChooseOrCreateTargetInteraction ; // Oneway relation
+            }; // End: ChooseOrCreateTargetInteractionInclude
+            type ChooseSourceInteraction : behavior::ChooseInteraction {
+            }; // End: ChooseSourceInteraction
+            [is_abstract]
+            type ChooseSourceInteractionInclude {
+                relationship sourceInteractionChoice Aggregates 1..1 ChooseSourceInteraction ; // Oneway relation
+            }; // End: ChooseSourceInteractionInclude
+            type SynthetizeInteraction : ChooseSourceInteractionInclude, ChooseOrCreateTargetInteractionInclude, behavior::InteractionContentInclude, InteractionContentExcludeInclude {
+            }; // End: SynthetizeInteraction
+            [is_abstract]
+            type SynthetizeInteractionInclude {
+                relationship interactionSynthesis Aggregates 0..* SynthetizeInteraction ; // Oneway relation
+            }; // End: SynthetizeInteractionInclude
+            type ExcludeInteraction : ChooseSourceInteractionInclude {
+            }; // End: ExcludeInteraction
+            [is_abstract]
+            type ExcludeInteractionInclude {
+                relationship interactionExclusions Aggregates 0..* ExcludeInteraction ; // Oneway relation
+            }; // End: ExcludeInteractionInclude
+            type ExcludeStimuli : behavior::ChooseStimuli {
+            }; // End: ExcludeStimuli
+            type ExcludeReturn : behavior::ChooseReturn {
+            }; // End: ExcludeReturn
+            [is_abstract]
+            type ExcludeStimuliInclude {
+                relationship stimuliExclusions Aggregates 0..* ExcludeStimuli ; // Oneway relation
+            }; // End: ExcludeStimuliInclude
+            [is_abstract]
+            type ExcludeReturnInclude {
+                relationship returnExclusions Aggregates 0..* ExcludeReturn ; // Oneway relation
+            }; // End: ExcludeReturnInclude
+            [is_abstract]
+            type InteractionContentExcludeInclude : ExcludeReturnInclude, ExcludeStimuliInclude {
+            }; // End: InteractionContentExcludeInclude
+        }; // End behaviortrace
+        module organizetrace {
+            type SynthetizePackage : ChooseSourcePackageInclude, ChooseOrCreateTargetPackageInclude, support::RenameAbstract, organize::PackageContentsInclude, PackageContentsExcludeInclude {
+            }; // End: SynthetizePackage
+            [is_abstract]
+            type SynthetizePackageInclude {
+                relationship packageSynthesis Aggregates 0..* SynthetizePackage ; // Oneway relation
+            }; // End: SynthetizePackageInclude
+            type ChooseSourcePackage : organize::ChoosePackage {
+            }; // End: ChooseSourcePackage
+            [is_abstract]
+            type ChooseSourcePackageInclude {
+                relationship choiceSourcePackage Aggregates 1..1 ChooseSourcePackage ; // Oneway relation
+            }; // End: ChooseSourcePackageInclude
+            type ChooseOrCreateTargetPackage : organize::ChooseOrCreatePackage {
+            }; // End: ChooseOrCreateTargetPackage
+            [is_abstract]
+            type ChooseOrCreateTargetPackageInclude {
+                relationship choiceTargetPackage Aggregates 1..1 ChooseOrCreateTargetPackage ; // Oneway relation
+            }; // End: ChooseOrCreateTargetPackageInclude
+            type ExcludePackage : ChooseSourcePackageInclude {
+            }; // End: ExcludePackage
+            [is_abstract]
+            type ExcludePackageInclude {
+                relationship packageExclusions Aggregates 0..* ExcludePackage ; // Oneway relation
+            }; // End: ExcludePackageInclude
+            [is_abstract]
+            type PackageContentsExcludeInclude : definetrace::ExcludeAssemblyInclude, definetrace::ExcludeComponentInclude, structuraltrace::ExcludeInfoTypeInclude, definetrace::ExcludePortInclude, ExcludePackageInclude {
+            }; // End: PackageContentsExcludeInclude
+        }; // End organizetrace
+    }; // End usecases
+    module core {
+        module projection {
+            module define {
+                type AliasProjection : model::define::AbstractAlias, projecting::Projected, projecting::Projectable {
+                }; // End: AliasProjection
+                type AssemblyProjection : model::define::AbstractAssembly, projecting::Projected, projecting::Projectable {
+                }; // End: AssemblyProjection
+                type ComponentProjection : model::define::AbstractComponent, projecting::Projected, projecting::Projectable {
+                }; // End: ComponentProjection
+                type LinkProjection : model::define::AbstractLink, projecting::Projected, projecting::Projectable {
+                }; // End: LinkProjection
+                type PortProjection : model::define::AbstractPort, projecting::Projected, projecting::Projectable {
+                }; // End: PortProjection
+                type RelayProjection : model::define::AbstractRelay, projecting::Projected, projecting::Projectable {
+                }; // End: RelayProjection
+            }; // End define
+            module behavior {
+                type BehaviorInHandlerProjection : model::behavior::AbstractBehaviorInHandler, projecting::Projectable, projecting::Projected {
+                }; // End: BehaviorInHandlerProjection
+                type ListenedProjection : model::behavior::AbstractListened, projecting::Projectable, projecting::Projected {
+                }; // End: ListenedProjection
+                type RequestedProjection : model::behavior::AbstractRequested, projecting::Projectable, projecting::Projected {
+                }; // End: RequestedProjection
+                type RespondedProjection : model::behavior::AbstractResponded, projecting::Projectable, projecting::Projected {
+                }; // End: RespondedProjection
+                type SignaledProjection : model::behavior::AbstractSignaled, projecting::Projectable, projecting::Projected {
+                }; // End: SignaledProjection
+            }; // End behavior
+            module organize {
+                type ProjectProjection : model::organize::AbstractProject, projecting::Projectable, projecting::Projected {
+                }; // End: ProjectProjection
+                type PackageProjection : model::organize::AbstractPackage, projecting::Projectable, projecting::Projected {
+                }; // End: PackageProjection
+            }; // End organize
+            module structural {
+                type AttributeProjection : model::structural::AbstractAttribute, projecting::Projectable, projecting::Projected {
+                }; // End: AttributeProjection
+                type EnumeratedTypeProjection : model::structural::AbstractEnumeratedType, projecting::Projectable, projecting::Projected {
+                }; // End: EnumeratedTypeProjection
+                type PrimitiveJavaClassProjection : model::structural::AbstractPrimitiveJavaClass, projecting::Projectable, projecting::Projected {
+                }; // End: PrimitiveJavaClassProjection
+                type StructuredJavaClassProjection : model::structural::AbstractStructuredJavaClass, projecting::Projectable, projecting::Projected {
+                }; // End: StructuredJavaClassProjection
+                type ReferenceProjection : model::structural::AbstractReference, projecting::Projectable, projecting::Projected {
+                }; // End: ReferenceProjection
+                type DocumentProjection : model::structural::AbstractDocument, projecting::Projectable, projecting::Projected {
+                }; // End: DocumentProjection
+            }; // End structural
+            module edoc {
+            }; // End edoc
+            module projecting {
+                [is_abstract]
+                type Projectable : model::common::Common {
+                    relationship originalOfProjections Many 0..* Projection inverse originals ;
+                }; // End: Projectable
+                [is_abstract]
+                type Projection : model::common::Common {
+                    relationship originals Many 0..* Projectable inverse originalOfProjections ;
+                    relationship subProjections Aggregates 0..* Projection inverse superProjection ;
+                    relationship superProjection IsPartOf 0..1 Projection inverse subProjections ;
+                }; // End: Projection
+                [is_abstract]
+                type Projected : model::common::Common {
+                    relationship projections Aggregates 0..* Fachade inverse projected ;
+                }; // End: Projected
+                type Hide : Projection {
+                }; // End: Hide
+                type Fachade : Projection {
+                    relationship projected IsPartOf 0..1 Projected inverse projections ;
+                }; // End: Fachade
+            }; // End projecting
+        }; // End projection
+        module model {
+            module define {
+                [is_abstract]
+                type ComponentOwner : common::Common {
+                    // Relation: OwnedComponents
+                    relationship ownedComponents Aggregates 0..* AbstractComponent inverse componentOwner ;
+                }; // End: ComponentOwner
+                [is_abstract]
+                type AbstractComponent : PortOwner, AssemblyOwner, DelegationOwner, behavior::HandlerOwner, behavior::DispatcherOwner, structural::StructuralFeatureOwner, structural::InfoTypeOwner, observe::DependencyOwner, trace::Target, trace::Source {
+                    // Relation: OwnedComponents
+                    relationship componentOwner IsPartOf 0..1 ComponentOwner inverse ownedComponents ;
+                }; // End: AbstractComponent
+                [is_abstract]
+                type AssemblyOwner : common::Common {
+                    // Relation: OwnedAssemblies
+                    relationship ownedAssemblies Aggregates 0..* AbstractAssembly inverse assemblyOwner ;
+                }; // End: AssemblyOwner
+                [is_abstract]
+                type AbstractAssembly : ComponentOwner, LinkOwner, trace::Source, trace::Target {
+                    // Relation: OwnedAssemblies
+                    relationship assemblyOwner IsPartOf 0..1 AssemblyOwner inverse ownedAssemblies ;
+                }; // End: AbstractAssembly
+                [is_abstract]
+                type AbstractRelay : Delegation {
+                }; // End: AbstractRelay
+                [is_abstract]
+                type AbstractAlias : Delegation {
+                }; // End: AbstractAlias
+                [is_abstract]
+                type LinkOwner : common::Common {
+                    // Relation: OwnedLinks
+                    relationship ownedLinks Aggregates 0..* AbstractLink inverse linkOwner ;
+                }; // End: LinkOwner
+                [is_abstract]
+                type PortOwner : common::Common {
+                    // Relation: OwnedPorts
+                    relationship ownedPorts Aggregates 0..* AbstractPort inverse portOwner ;
+                }; // End: PortOwner
+                [is_abstract]
+                type AbstractPort : PortOwner, Delegator, Delegate, behavior::InteractionOwner, behavior::HandlerOwner, behavior::DispatcherOwner, structural::StructuralFeatureOwner, structural::InfoTypeOwner, trace::Source, trace::Target {
+                    relationship /links Many 0..* AbstractLink ; // Oneway relation
+                    // Relation: OwnedPorts
+                    relationship portOwner IsPartOf 1..1 PortOwner inverse ownedPorts ;
+                    // Relation: ConnectedPort
+                    relationship connectedLinks Many 0..* AbstractLink inverse connectedPort ;
+                }; // End: AbstractPort
+                [is_abstract]
+                type DelegationOwner : common::Common {
+                    // Relation: OwnedDelegations
+                    relationship ownedDelegations Aggregates 0..* Delegation inverse delegationOwner ;
+                }; // End: DelegationOwner
+                [is_abstract]
+                type Delegator : common::Common {
+                    // Relation: Delegator
+                    relationship delegatorOf Many 0..* Delegation inverse delegator ;
+                }; // End: Delegator
+                [is_abstract]
+                type Delegation : trace::Source, trace::Target {
+                    // Relation: OwnedDelegations
+                    relationship delegationOwner IsPartOf 1..1 DelegationOwner inverse ownedDelegations ;
+                    // Relation: Delegator
+                    relationship delegator References 1..1 Delegator inverse delegatorOf ;
+                    // Relation: Delegate
+                    relationship delegate References 1..1 Delegate inverse delegateOf ;
+                }; // End: Delegation
+                [is_abstract]
+                type Delegate : common::Common {
+                    // Relation: Delegate
+                    relationship delegateOf Many 0..* Delegation inverse delegate ;
+                }; // End: Delegate
+                [is_abstract]
+                type AbstractLink : trace::Target, trace::Source {
+                    // Relation: OwnedLinks
+                    relationship linkOwner IsPartOf 1..1 LinkOwner inverse ownedLinks ;
+                    // Relation: ConnectedPort
+                    relationship connectedPort References 1..1 AbstractPort inverse connectedLinks ;
+                    relationship link References 1..1 AbstractLink inverse link ;
+                    relationship link References 1..1 AbstractLink inverse link ;
+                }; // End: AbstractLink
+                type Component : AbstractComponent, projection::projecting::Projectable {
+                }; // End: Component
+                type Assembly : AbstractAssembly, projection::projecting::Projectable {
+                }; // End: Assembly
+                type Link : AbstractLink, projection::projecting::Projectable {
+                }; // End: Link
+                type Relay : AbstractRelay, projection::projecting::Projectable {
+                }; // End: Relay
+                type Alias : AbstractAlias, projection::projecting::Projectable {
+                }; // End: Alias
+                type Port : AbstractPort, projection::projecting::Projectable {
+                }; // End: Port
+            }; // End define
+            module trace {
+                [is_abstract]
+                type Target : common::Common {
+                    // Relation: Targets
+                    relationship transformations Aggregates 0..* Transformation inverse target ;
+                }; // End: Target
+                type Transformation : Annotation {
+                    // Relation: Targets
+                    relationship target IsPartOf 0..1 Target inverse transformations ;
+                    // Relation: SubTransformations
+                    relationship superTransformation IsPartOf 0..1 Transformation inverse subTransformations ;
+                    relationship subTransformations Aggregates 0..* Transformation inverse superTransformation ;
+                }; // End: Transformation
+                type Synthesis : Transformation {
+                    attribute support::SynthesisMode substitute;
+                }; // End: Synthesis
+                type Version : Transformation {
+                }; // End: Version
+                type URL : Attachment {
+                }; // End: URL
+                type Media : Attachment {
+                }; // End: Media
+                type Comment : common::Common {
+                    // Relation: Attachments
+                    relationship attachements Aggregates 0..* Attachment inverse attachmentOwner ;
+                }; // End: Comment
+                type Attachment : common::Common {
+                    // Relation: Attachments
+                    relationship attachmentOwner IsPartOf 1..1 Comment inverse attachements ;
+                }; // End: Attachment
+                type Annotation : Comment {
+                    // Relation: Sources
+                    relationship sources Many 0..* Source inverse sourceOfAnnnotations ;
+                }; // End: Annotation
+                [is_abstract]
+                type Source : common::Common {
+                    // Relation: Sources
+                    relationship sourceOfAnnnotations Many 0..* Annotation inverse sources ;
+                }; // End: Source
+                type Exclusion : Annotation {
+                    attribute String excludedInRelationshipNamed;
+                }; // End: Exclusion
+            }; // End trace
+            module behavior {
+                [is_abstract]
+                type UnidirectionalInteraction : Interaction {
+                }; // End: UnidirectionalInteraction
+                [is_abstract]
+                type AbstractSignaled : UnidirectionalInteraction {
+                }; // End: AbstractSignaled
+                [is_abstract]
+                type AbstractListened : UnidirectionalInteraction {
+                }; // End: AbstractListened
+                [is_abstract]
+                type AbstractRequested : BidirectionalInteraction {
+                }; // End: AbstractRequested
+                [is_abstract]
+                type AbstractResponded : BidirectionalInteraction {
+                }; // End: AbstractResponded
+                type JavaClassHandler : Handler {
+                    attribute String fullyQualifiedClassName;
+                }; // End: JavaClassHandler
+                type JavaMethodDispatcher : Dispatcher {
+                    attribute String methodName;
+                    attribute String[] argumentClassNames;
+                    attribute String[] resultClassName;
+                    attribute String[] argumentValueExpressions;
+                }; // End: JavaMethodDispatcher
+                [is_abstract]
+                type Activation : BehaviorOwner {
+                }; // End: Activation
+                [is_abstract]
+                type BidirectionalInteraction : Interaction {
+                    // Relation: OwnedReturns
+                    relationship ownedReturns Aggregates 0..* Return inverse returnOfInteractions ;
+                }; // End: BidirectionalInteraction
+                [is_abstract]
+                type InteractionOwner : common::Common {
+                    // Relation: OwnedInteractions
+                    relationship ownedInteractions Aggregates 0..* Interaction inverse interactionOwner ;
+                }; // End: InteractionOwner
+                [is_abstract]
+                type Interaction : Activation, trace::Source, trace::Target {
+                    // Relation: OwnedStimuli
+                    relationship ownedStimuli Aggregates 0..* Stimuli inverse stimuliOfInteractions ;
+                    // Relation: OwnedInteractions
+                    relationship interactionOwner IsPartOf 1..1 InteractionOwner inverse ownedInteractions ;
+                }; // End: Interaction
+                [is_abstract]
+                type HandlerOwner : common::Common {
+                    // Relation: OwnedHandlers
+                    relationship ownedHandlers Aggregates 0..* Handler inverse handlerOwner ;
+                }; // End: HandlerOwner
+                [is_abstract]
+                type Handler : common::Common {
+                    // Relation: OwnedHandlers
+                    relationship handlerOwner IsPartOf 1..1 HandlerOwner inverse ownedHandlers ;
+                    // Relation: Handler
+                    relationship handlerOfBehaviors Many 0..* AbstractBehaviorInHandler inverse handler ;
+                }; // End: Handler
+                [is_abstract]
+                type AbstractBehaviorInHandler : Behavior {
+                    // Relation: Handler
+                    relationship handler References 1..1 Handler inverse handlerOfBehaviors ;
+                    // Relation: Dispatcher
+                    relationship dispatcher References 1..1 Dispatcher inverse dispatcherOfBehaviors ;
+                }; // End: AbstractBehaviorInHandler
+                [is_abstract]
+                type DispatcherOwner : common::Common {
+                    // Relation: OwnedDispatchers
+                    relationship ownedDispatchers Aggregates 0..* Dispatcher inverse dispatcherOwner ;
+                }; // End: DispatcherOwner
+                [is_abstract]
+                type Dispatcher : common::Common {
+                    // Relation: Dispatcher
+                    relationship dispatcherOfBehaviors Many 0..* AbstractBehaviorInHandler inverse dispatcher ;
+                    // Relation: OwnedDispatchers
+                    relationship dispatcherOwner IsPartOf 1..1 DispatcherOwner inverse ownedDispatchers ;
+                }; // End: Dispatcher
+                [is_abstract]
+                type BehaviorOwner : common::Common {
+                    // Relation: OwnedBehaviors
+                    relationship ownedBehaviors Aggregates 0..* Behavior inverse behaviorOwner ;
+                }; // End: BehaviorOwner
+                [is_abstract]
+                type Behavior : trace::Source, trace::Target {
+                    // Relation: OwnedBehaviors
+                    relationship behaviorOwner IsPartOf 1..1 BehaviorOwner inverse ownedBehaviors ;
+                }; // End: Behavior
+                type Signaled : AbstractSignaled, projection::projecting::Projectable {
+                }; // End: Signaled
+                type Listened : AbstractListened, projection::projecting::Projectable {
+                }; // End: Listened
+                type Requested : AbstractRequested, projection::projecting::Projectable {
+                }; // End: Requested
+                type Responded : AbstractResponded, projection::projecting::Projectable {
+                }; // End: Responded
+                type BehaviorInHandler : AbstractBehaviorInHandler, projection::projecting::Projectable {
+                }; // End: BehaviorInHandler
+                type Stimuli : structural::InfoTypeOwner {
+                    // Relation: OwnedStimuli
+                    relationship stimuliOfInteractions IsPartOf 1..1 Interaction inverse ownedStimuli ;
+                }; // End: Stimuli
+                type Return : structural::InfoTypeOwner {
+                    // Relation: OwnedReturns
+                    relationship returnOfInteractions IsPartOf 1..1 BidirectionalInteraction inverse ownedReturns ;
+                }; // End: Return
+            }; // End behavior
+            module support {
+//Error: Invalid stereotype: Enumeration
+                type DirectionKind {
+                    attribute String IN;
+                    attribute String OUT;
+                    attribute String BI;
+                }; // End: DirectionKind
+//Error: Invalid stereotype: Enumeration
+                type ScheduleKind {
+                    attribute String IMMEDIATE;
+                    attribute String INTERACTION;
+                    attribute String TRANSACTION;
+                    attribute String SESSION;
+                    attribute String LATE;
+                }; // End: ScheduleKind
+//Error: Invalid stereotype: Enumeration
+                type SynthesisMode {
+                    attribute String OVERRIDABLE;
+                    attribute String SUBSTITUTION;
+                    attribute String IDENTICAL;
+                }; // End: SynthesisMode
+            }; // End support
+            module organize {
+                [is_abstract]
+                type AbstractOrganizational : define::ComponentOwner, define::AssemblyOwner, structural::InfoTypeOwner, PackageOwner, define::PortOwner, trace::Target, trace::Source {
+                }; // End: AbstractOrganizational
+                [is_abstract]
+                type AbstractProject : AbstractOrganizational {
+                }; // End: AbstractProject
+                [is_abstract]
+                type PackageOwner : common::Common {
+                    relationship subPackages Aggregates 0..* AbstractPackage inverse packageOwner ;
+                }; // End: PackageOwner
+                [is_abstract]
+                type AbstractPackage : AbstractOrganizational {
+                    relationship packageOwner IsPartOf 0..1 PackageOwner inverse subPackages ;
+                }; // End: AbstractPackage
+                type Project : AbstractProject, projection::projecting::Projectable {
+                }; // End: Project
+                type Package : AbstractPackage, projection::projecting::Projectable {
+                }; // End: Package
+            }; // End organize
+            module structural {
+                [is_abstract]
+                type PrimitiveType : InfoType {
+                }; // End: PrimitiveType
+                [is_abstract]
+                type AbstractAttribute : DefinedStructuralFeature {
+                }; // End: AbstractAttribute
+                [is_abstract]
+                type AbstractReference : DefinedStructuralFeature {
+                }; // End: AbstractReference
+                [is_abstract]
+                type AbstractEnumeratedType : InfoType {
+                    // Relation: EnumeratedValues
+                    relationship enumeratedValues Aggregates 0..* EnumeratedValue inverse type ;
+                }; // End: AbstractEnumeratedType
+                type EnumeratedValue : common::Common {
+                    // Relation: EnumeratedValues
+                    relationship type IsPartOf 1..1 AbstractEnumeratedType inverse enumeratedValues ;
+                }; // End: EnumeratedValue
+                [is_abstract]
+                type DefinedStructuralFeature : StructuralFeature {
+                    attribute int minMultiplicity;
+                    attribute int maxMultiplicity;
+                    attribute String valueExpression;
+                    // Relation: TypeOfStructuralFeature
+                    relationship infoType Aggregates 1..1 StructuralFeatureTyping inverse definedStructuralFeature ;
+                }; // End: DefinedStructuralFeature
+                [is_abstract]
+                type InfoTypeOwner : common::Common {
+                    // Relation: OwnedTypes
+                    relationship ownedInfoTypes Aggregates 0..* InfoType inverse infoTypeOwner ;
+                }; // End: InfoTypeOwner
+                [is_abstract]
+                type AbstractPrimitiveJavaClass : PrimitiveType, NativeResource {
+                }; // End: AbstractPrimitiveJavaClass
+                [is_abstract]
+                type NativeResource : common::Common {
+                    attribute String fullyQualifiedClassName;
+                }; // End: NativeResource
+                [is_abstract]
+                type AbstractStructuredJavaClass : NativeResource, behavior::DispatcherOwner, InfoTypeOwner, StructuredType {
+                }; // End: AbstractStructuredJavaClass
+                [is_abstract]
+                type StructuralFeatureOwner : trace::Target, trace::Source {
+                    // Relation: OwnedStructuralFeatures
+                    relationship ownedStructuralFeatures Aggregates 0..* StructuralFeature inverse featureOwner ;
+                }; // End: StructuralFeatureOwner
+                [is_abstract]
+                type StructuralFeature : trace::Target, trace::Source {
+                    // Relation: OwnedStructuralFeatures
+                    relationship featureOwner IsPartOf 1..1 StructuralFeatureOwner inverse ownedStructuralFeatures ;
+                    // Relation: Exposed
+                    relationship exposedAs Many 0..* ExposedStructuralFeature inverse exposed ;
+                }; // End: StructuralFeature
+                type ExposedStructuralFeature : StructuralFeature {
+                    // Relation: Exposed
+                    relationship exposed References 1..1 StructuralFeature inverse exposedAs ;
+                }; // End: ExposedStructuralFeature
+                [is_abstract]
+                type AbstractDocument : StructuredType, InfoTypeOwner {
+                }; // End: AbstractDocument
+                [is_abstract]
+                type InfoType : common::Common {
+                    // Relation: OwnedTypes
+                    relationship infoTypeOwner IsPartOf 1..1 InfoTypeOwner inverse ownedInfoTypes ;
+                }; // End: InfoType
+                type EnumeratedType : AbstractEnumeratedType, projection::projecting::Projectable {
+                }; // End: EnumeratedType
+                type PrimitiveJavaClass : AbstractPrimitiveJavaClass, projection::projecting::Projectable {
+                }; // End: PrimitiveJavaClass
+                type StructuredJavaClass : AbstractStructuredJavaClass, projection::projecting::Projectable {
+                }; // End: StructuredJavaClass
+                type Document : AbstractDocument, projection::projecting::Projectable {
+                }; // End: Document
+                type StructuralFeatureTyping : InfoTypeOwner {
+                    // Relation: TypeOfStructuralFeature
+                    relationship definedStructuralFeature IsPartOf 1..1 DefinedStructuralFeature inverse infoType ;
+                }; // End: StructuralFeatureTyping
+                type StructuredType : InfoType, StructuralFeatureOwner {
+                }; // End: StructuredType
+            }; // End structural
+            module observe {
+                [is_abstract]
+                type Activation : common::Common {
+                }; // End: Activation
+                [is_abstract]
+                type DependencyOwner : common::Common {
+                    relationship ownedDependencies Aggregates 0..* Dependency inverse dependencyOwner ;
+                }; // End: DependencyOwner
+                type Dependency : Activation, behavior::Activation, trace::Source, trace::Target {
+                    attribute String path;
+                    attribute support::ScheduleKind schedule;
+                    relationship dependencyOwner IsPartOf 1..1 DependencyOwner inverse ownedDependencies ;
+                }; // End: Dependency
+            }; // End observe
+            module common {
+                type Common {
+                }; // End: Common
+            }; // End common
+            module edoc {
+                type ProcessType : define::AbstractComponent {
+                }; // End: ProcessType
+                type BusinessSignal : structural::AbstractDocument {
+                }; // End: BusinessSignal
+                type Content : structural::AbstractDocument {
+                }; // End: Content
+                type Community : organize::AbstractOrganizational {
+                }; // End: Community
+                type InteractionPortal : define::AbstractPort {
+                }; // End: InteractionPortal
+                type InteractionInterface : define::AbstractPort {
+                }; // End: InteractionInterface
+                type CompositeProcess : BusinessProcess {
+                }; // End: CompositeProcess
+                [is_abstract]
+                type BusinessProcess : define::AbstractComponent {
+                }; // End: BusinessProcess
+                type PrimitiveProcess : BusinessProcess {
+                }; // End: PrimitiveProcess
+                type Connection : define::AbstractLink {
+                }; // End: Connection
+                type InternalRole : define::AbstractComponent {
+                }; // End: InternalRole
+                type ExternalRole : define::AbstractComponent {
+                }; // End: ExternalRole
+                type Resource : define::AbstractComponent {
+                }; // End: Resource
+                type StructuralType : structural::StructuralFeatureOwner {
+                }; // End: StructuralType
+                type Reference : structural::AbstractReference, projection::projecting::Projectable {
+                }; // End: Reference
+                type Attribute : structural::AbstractAttribute, projection::projecting::Projectable {
+                }; // End: Attribute
+            }; // End edoc
+        }; // End model
+    }; // End core
+    module TravelSample {
+        module 02_Flight {
+            module FlightStyleVariations {
+            }; // End FlightStyleVariations
+        }; // End 02_Flight
+        module 03_Hotel {
+            module HotelStyleVariations {
+            }; // End HotelStyleVariations
+        }; // End 03_Hotel
+        module 01_CustomerRepository {
+            module CustomerRepositoryStyleVariations {
+            }; // End CustomerRepositoryStyleVariations
+        }; // End 01_CustomerRepository
+        module 05_Travel {
+            module Arrangements {
+                module Travel_ArrangementsStyleVariations {
+                }; // End Travel_ArrangementsStyleVariations
+            }; // End Arrangements
+            module Reservations {
+            }; // End Reservations
+            module Purchase {
+            }; // End Purchase
+        }; // End 05_Travel
+        module 04_Client {
+            module ClientStyleVariations {
+            }; // End ClientStyleVariations
+        }; // End 04_Client
+        module 00_Library {
+        }; // End 00_Library
+    }; // End TravelSample

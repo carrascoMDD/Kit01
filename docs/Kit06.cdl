@@ -1,0 +1,261 @@
+//---------------------------------------------------------
+// CDL Generated based on pending OMG UML to CDL specification (0.3)
+// Source Model: Q:\BXS\EAI\Studio\Kit01\docs\Kit06.mdl
+// Generated CDL specification: Q:\BXS\EAI\Studio\Kit01\docs\Kit06.cdl
+// On 4/29/2000 
+//---------------------------------------------------------
+#include <BocaFramework.cdl>
+// Forward References
+// Logical View
+    module define {
+        type PortOwner;
+        type Port;
+        type ComponentOwner;
+        type Component;
+        type LinkOwner;
+        type Link;
+        type Assembly;
+        type AssemblyOwner;
+        type Relay;
+        type Alias;
+        type Delegation;
+        type DelegationOwner;
+        type Delegator;
+        type Delegate;
+    }; // End define
+    module trace {
+        type Comment;
+        type Annotation;
+        type Transformation;
+        type Source;
+        type Target;
+        type Synthesis;
+        type Version;
+        type Attachment;
+        type URL;
+        type Media;
+        type Exclusion;
+    }; // End trace
+    module behavior {
+        type Activation;
+        type Behavior;
+        type UnidirectionalInteraction;
+        type Signaled;
+        type Listened;
+        type Requested;
+        type Responded;
+        type Interaction;
+        type BidirectionalInteraction;
+        type Handler;
+        type BehaviorInHandler;
+        type HandlerOwner;
+        type Dispatcher;
+        type JavaClassHandler;
+        type JavaMethodDispatcher;
+        type InteractionOwner;
+        type DispatcherOwner;
+        type BehaviorOwner;
+    }; // End behavior
+    module support {
+//Error: Invalid stereotype: Enumeration
+        type DirectionKind;
+//Error: Invalid stereotype: Enumeration
+        type ScheduleKind;
+    }; // End support
+    module organize {
+        type AbstractPackage;
+        type Project;
+        type PackageOwner;
+        type Package;
+    }; // End organize
+    module structural {
+        type PrimitiveType;
+        type Attribute;
+        type Reference;
+        type EnumeratedType;
+        type EnumeratedValue;
+        type StructuralFeatureOwner;
+        type AbstractType;
+        type StructuralFeature;
+        type DefinedStructuralFeature;
+        type ExposedStructuralFeature;
+        type TypeOwner;
+        type PrimitiveJavaClass;
+        type NativeResource;
+        type StructuredJavaClass;
+        type Document;
+    }; // End structural
+    module edoc {
+        type ProcessType;
+        type BusinessSignal;
+        type Content;
+        type Community;
+        type InteractionPortal;
+        type InteractionInterface;
+        type CompositeProcess;
+        type BusinessProcess;
+        type PrimitiveProcess;
+        type Connection;
+        type InternalRole;
+        type ExternalRole;
+        type Resource;
+        type StructuralType;
+        type Reference;
+        type Attribute;
+    }; // End edoc
+    module observe {
+        type Dependency;
+        type DependencyOwner;
+    }; // End observe
+    module common {
+        type Common;
+    }; // End common
+    module TravelSample {
+        module 02_Flight {
+            module FlightStyleVariations {
+            }; // End FlightStyleVariations
+        }; // End 02_Flight
+        module 03_Hotel {
+            module HotelStyleVariations {
+            }; // End HotelStyleVariations
+        }; // End 03_Hotel
+        module 01_CustomerRepository {
+            module CustomerRepositoryStyleVariations {
+            }; // End CustomerRepositoryStyleVariations
+        }; // End 01_CustomerRepository
+        module 05_Travel {
+            module Arrangements {
+                module Travel_ArrangementsStyleVariations {
+                }; // End Travel_ArrangementsStyleVariations
+            }; // End Arrangements
+            module Reservations {
+            }; // End Reservations
+            module Purchase {
+            }; // End Purchase
+        }; // End 05_Travel
+        module 04_Client {
+            module ClientStyleVariations {
+            }; // End ClientStyleVariations
+        }; // End 04_Client
+        module 00_Library {
+        }; // End 00_Library
+    }; // End TravelSample
+    module actions {
+        type EditComponent;
+        type CreateComponent;
+        type EditPort;
+        type ChooseOrCreateComponentClient;
+        type CreatePort;
+        type DeletePort;
+        type EditInteraction;
+        type DeleteInteraction;
+        type ChooseOrCreateInteractionClient;
+        type CreateInteraction;
+        type CreateListened;
+        type CreateSignaled;
+        type CreateRequested;
+        type CreateResponded;
+        type ChoosePort;
+        type ChooseComponent;
+        type ChooseInteraction;
+        type AddStimuli;
+        type ChooseOrCreateDocumentClient;
+        type DeleteStimuli;
+        type ChooseOrCreatePortClient;
+        type DeleteComponent;
+        type ModelingSession;
+        type ModelingProject;
+        type ChooseStimuli;
+        type DeleteReturn;
+        type AddReturn;
+        type ChooseReturn;
+        type ChooseDocument;
+        type CreateDocument;
+        type EditPackage;
+        type DeletePackage;
+        type CreatePackage;
+        type ChooseOrCreatePackage;
+        type ChoosePackage;
+        type EditDocument;
+        type DeleteDocument;
+        type ChoosePackageClient;
+        type CreatePackageClient;
+        type ChooseOrCreatePackageClient;
+        type ChooseOrCreateComponent;
+        type ChooseComponentClient;
+        type CreateComponentClient;
+        type ChooseOrCreatePort;
+        type ChoosePortClient;
+        type CreatePortClient;
+        type ChooseOrCreateInteraction;
+        type ChooseInteractionClient;
+        type CreateInteractionClient;
+        type ChooseOrCreateDocument;
+        type CreateDocumentClient;
+        type ChooseDocumentClient;
+        type EditDocumentOwner;
+        type EditStructuralFeatureOwner;
+        type DeleteStructuralFeature;
+        type ChooseStructuralFeature;
+        type ChooseStructuralFeatureClient;
+        type EditStructuralFeature;
+        type CreateStructuralFeature;
+        type CreateStructuralFeatureClient;
+        type ChooseOrCreateStructuralFeature;
+        type ChooseOrCreateStructuralFeatureClient;
+        type ChooseStructuralFeatureType;
+        type ChooseExposedStructuralFeature;
+        type CreateExposedStructuralFeature;
+        type CreateAttribute;
+        type CreateReference;
+        type SetMinMultiplicity;
+        type SetMaxMultiplicity;
+        type SetValueExpression;
+    }; // End actions
+//---------------------------------------------------------
+// Specification
+// Logical View
+    module define {
+        [is_abstract]
+        type PortOwner : common::Common {
+            // Relation: OwnedPorts
+            relationship ownedPorts Aggregates 0..* Port inverse portOwner ;
+        }; // End: PortOwner
+        type Port : PortOwner, Delegator, Delegate, trace::Target, trace::Source, behavior::InteractionOwner, behavior::HandlerOwner, behavior::DispatcherOwner, structural::StructuralFeatureOwner, structural::TypeOwner {
+            relationship /structuralFeatures Many 0..* structural::StructuralFeature ; // Oneway relation
+            // Relation: OwnedPorts
+            relationship portOwner IsPartOf 1..1 PortOwner inverse ownedPorts ;
+            // Relation: ConnectedPort
+            relationship connectedLinks Many 0..* Link inverse connectedPort ;
+            relationship /ports Many 0..* Port ; // Oneway relation
+            relationship /handlers Many 0..* behavior::Handler ; // Oneway relation
+            relationship /dispatchers Many 0..* behavior::Dispatcher ; // Oneway relation
+            relationship /links Many 0..* Link ; // Oneway relation
+            relationship /interactions Many 0..* behavior::Interaction ; // Oneway relation
+        }; // End: Port
+        [is_abstract]
+        type ComponentOwner : common::Common {
+            // Relation: OwnedComponents
+            relationship ownedComponents Aggregates 0..* Component inverse componentOwner ;
+        }; // End: ComponentOwner
+        type Component : PortOwner, AssemblyOwner, DelegationOwner, trace::Target, trace::Source, behavior::HandlerOwner, behavior::DispatcherOwner, structural::StructuralFeatureOwner, structural::TypeOwner, observe::DependencyOwner {
+            relationship /structuralFeatures Many 0..* structural::StructuralFeature ; // Oneway relation
+            relationship /types Many 0..* structural::AbstractType ; // Oneway relation
+            relationship /dependencies Many 0..* observe::Dependency ; // Oneway relation
+            // Relation: OwnedComponents
+            relationship componentOwner IsPartOf 0..1 ComponentOwner inverse ownedComponents ;
+            relationship /ports Many 0..* Port ; // Oneway relation
+            relationship /assemblies Many 0..* Assembly ; // Oneway relation
+            relationship /delegations Many 0..* Delegation ; // Oneway relation
+            relationship /handlers Many 0..* behavior::Handler ; // Oneway relation
+            relationship /dispatchers Many 0..* behavior::Dispatcher ; // Oneway relation
+        }; // End: Component
+        [is_abstract]
+        type LinkOwner : common::Common {
+            // Relation: OwnedLinks
+            relationship ownedLinks Aggregates 0..* Link inverse linkOwner ;
+        }; // End: LinkOwner
+        type Link : trace::Target, trace::Source {
+            // Relation: OwnedLinks
+            relationship linkOwner IsPartOf 1..1 LinkOwner inverse ownedLinks ;
+            // Relation: Link
